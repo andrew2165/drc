@@ -10,6 +10,7 @@ function(object, ..., level = NULL,
     {
         stop("Argument 'object' must be an object of class 'drc'")
     }
+    ggplotDrcRequireGgplot2()
 
     type <- match.arg(type)
     plotData <- ggplotDrcData(object, level = level, type = type,
@@ -39,6 +40,18 @@ function(object, ..., level = NULL,
     }
 
     p
+}
+
+
+"ggplotDrcRequireGgplot2" <- function(package = "ggplot2")
+{
+    if (!requireNamespace(package, quietly = TRUE))
+    {
+        stop("Package 'ggplot2' is required for ggplotDrc(). ",
+             "Please install it before using this plotting helper.",
+             call. = FALSE)
+    }
+    invisible(TRUE)
 }
 
 

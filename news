@@ -1,4 +1,10 @@
-## Changes in 'drc' 
+## Changes in 'drc'
+
+2026-06-17: The function ggplotDrc() has been added to create ggplot2-based
+plots from fitted drc models. It returns a standard ggplot object with observed
+responses, fitted dose-response curves, optional confidence bands, curve
+filtering, normalized responses, and explicit opt-in log-scaled axes.
+
 
 2017-12-19: Updating the event-time part of "drc", in particular in drm() (improved code provided by Andrea Onofri).
 

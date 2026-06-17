@@ -56,12 +56,14 @@ ggplotDrc(object, ..., level = NULL,
 
 \details{
   The fitted curves are generated from the same fitted model components used by
-  \code{\link{plot.drc}}, so the helper works across the dose-response model
-  functions supported by \pkg{drc}. Confidence bands use
+  \code{\link{plot.drc}}, so the helper works across standard single-dose
+  models supported by the existing \pkg{drc} plotting path. Confidence bands use
   \code{\link{predict.drc}} with \code{interval = "confidence"} when available.
+  The \pkg{ggplot2} package is required to use this helper.
 }
 
 \examples{
+if (requireNamespace("ggplot2", quietly = TRUE)) {
 ryegrass.m1 <- drm(rootl ~ conc, data = ryegrass, fct = LL.3())
 
 ggplotDrc(ryegrass.m1) + ggplot2::labs(title = "Ryegrass")
@@ -71,6 +73,7 @@ ggplotDrc(ryegrass.m1, type = "confidence",
           ylab = "Root length (cm)")
 
 ggplotDrc(ryegrass.m1, type = "confidence", log_x_axis = TRUE)
+}
 }
 
 \keyword{aplot}

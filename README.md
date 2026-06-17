@@ -25,7 +25,7 @@ devtools::install_github("DoseResponse/drc")
 The `ggplotDrc()` helper creates a `ggplot2` plot from a fitted `drc`
 model. It returns a regular `ggplot` object, so you can keep adding
 ordinary `ggplot2` layers such as `labs()`, `lims()`, themes, and manual
-colour scales.
+colour scales. Install `ggplot2` to use this helper.
 
 
 ``` r
