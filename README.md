@@ -17,7 +17,7 @@ Analysis of dose-response data is made available through a suite of flexible and
 ## first installing drcData
 devtools::install_github("DoseResponse/drcData")
 ## then installing the development version of drc
-devtools::install_github("DoseResponse/drc")
+devtools::install_github("andrew2165/drc")
 ```
 
 ## ggplot2 plotting
